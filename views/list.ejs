@@ -6,6 +6,7 @@
 
   <div class="box">
 
+    <!-- Delete item from the list -->
 <% newListItems.forEach(function(item){ %>
   <form action="/delete" method="POST"> 
     <div class="item">
@@ -16,11 +17,12 @@
   </form>
 <% }) %>
 
+<!-- Add a new item -->
       <form class="item" action="/" method="post">
         <input type="text" name="newItem" placeholder="New Item" autocomplete="off">
         <button type="submit" name="list" value="<%= listTitle %>">+</button>
       </form>
-      
+
   </div>
 
 <%- include("footer") -%>
